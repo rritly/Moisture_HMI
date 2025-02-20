@@ -26,37 +26,37 @@ generator0 = TOFON0(emergency, 6)
 select case status1
 case 0
     waiting1 = true
-    break
+break
 case 1 
     onSW1 = true
-    break
+break
 case 2
     initia1 = true
-    break
+break
 case 3 
     run1 = true
-    break
+break
 case 4
     faultSP1 = true
-    break
+break
 end select
 
 select case status2
 case 0
     waiting2 = true
-    break
+break
 case 1 
     onSW2 = true
-    break
+break
 case 2
     initia2 = true
-    break
+break
 case 3 
     run2 = true
-    break
+break
 case 4
     faultSP2 = true
-    break
+break
 end select
 
 SetData(waiting1, "Local HMI", LB, 60, 1)

@@ -25,48 +25,48 @@ GetData(SelMode, "Local HMI", LW, 94, 1)
 
 
 select case SelMode
-	case 0
-		enManual2_16 = true
-		enManual1_17 = true
-		mainToAuto1 = false
-		mainToAuto2 = false
-	break
-	case 1
-		enManual2_12 = true
-		enAuto1_17 = true
-		mainToAuto2 = false
-		mainToManual1 = false
-	break
-	case 2
-		enManual1_15 = true
-		enAuto2_16 = true
-		mainToAuto1 = false
-		mainToManual1 = false
-	break
-	case 3
-		enAuto2_12 = true
-		enAuto1_15 = true
-		mainToManual1 = false
-		mainToAuto2 = false
-	break
+case 0
+    enManual2_16 = true
+    enManual1_17 = true
+    mainToAuto1 = false
+    mainToAuto2 = false
+break
+case 1
+    enManual2_12 = true
+    enAuto1_17 = true
+    mainToAuto2 = false
+    mainToManual1 = false
+break
+case 2
+    enManual1_15 = true
+    enAuto2_16 = true
+    mainToAuto1 = false
+    mainToManual1 = false
+break
+case 3
+    enAuto2_12 = true
+    enAuto1_15 = true
+    mainToManual1 = false
+    mainToAuto2 = false
+break
 end select
 
 
 
 if currScreen == 12 and (SelMode == 0 or SelMode == 2) then 
     if  selectScreen == 16 then
-    	selectScreen = 18
+        selectScreen = 18
     else if selectScreen <> 16 then
-    	selectScreen = 16
+        selectScreen = 16
     else
     end if
 else
 end if
 if currScreen == 15 and (SelMode == 0 or SelMode == 1) then 
     if  selectScreen == 17 then
-    	selectScreen = 18
+        selectScreen = 18
     else if selectScreen <> 17 then
-    	selectScreen = 17
+        selectScreen = 17
     else
     end if
 else
@@ -75,18 +75,18 @@ end if
 
 if currScreen == 16 and (SelMode == 1 or SelMode == 3) then 
     if  selectScreen == 12 then
-    	selectScreen = 18
+        selectScreen = 18
     else if selectScreen <> 12 then
-    	selectScreen = 12
+        selectScreen = 12
     else
     end if
 else
 end if
 if currScreen == 17 and (SelMode == 2 or SelMode == 3) then 
     if  selectScreen == 15 then
-    	selectScreen = 18
+        selectScreen = 18
     else if selectScreen <> 15 then
-    	selectScreen = 15
+        selectScreen = 15
     else
     end if
 else
@@ -95,9 +95,9 @@ end if
 
 
 if (currScreen <> 11) then 
-	pass = 3
+    pass = 3
 else if currScreen == 11 then
-	pass = 2
+    pass = 2
 else
 end if
 

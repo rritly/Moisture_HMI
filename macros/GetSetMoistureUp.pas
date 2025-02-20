@@ -14,19 +14,19 @@ enMoistuere = not err
 SetData(enMoistuere, "Local HMI", LB, 169, 1)
 
 if currMoisture < 0.1 then
-	errMoisture = true
-	currMoisture = 0.0
-	SetData(errMoisture, "Local HMI", LB, 234, 1)
-	SetData(currMoisture, "Local HMI", LW, 96, 1)
+    errMoisture = true
+    currMoisture = 0.0
+    SetData(errMoisture, "Local HMI", LB, 234, 1)
+    SetData(currMoisture, "Local HMI", LW, 96, 1)
 else if currMoisture > 19.9 then
-	errMoisture = true
-	currMoisture = 20.0
-	SetData(errMoisture, "Local HMI", LB, 234, 1)
-	SetData(currMoisture, "Local HMI", LW, 96, 1)
+    errMoisture = true
+    currMoisture = 20.0
+    SetData(errMoisture, "Local HMI", LB, 234, 1)
+    SetData(currMoisture, "Local HMI", LW, 96, 1)
 else
-	errMoisture = false
-	SetData(errMoisture, "Local HMI", LB, 234, 1)
-	SetData(currMoisture, "Local HMI", LW, 96, 1)
+    errMoisture = false
+    SetData(errMoisture, "Local HMI", LB, 234, 1)
+    SetData(currMoisture, "Local HMI", LW, 96, 1)
 end if
 
 
