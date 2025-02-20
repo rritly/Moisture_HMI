@@ -231,31 +231,31 @@ end if
 if macro and macroDelay and not pause then
 //Задаем номер позиции исходя из текущего положения влагомера
     if currDistance < pointDistance5 then
-    	position = 1
+        position = 1
     else
     end if
     if  currDistance > pointDistance5 then
-    	position = 2
+        position = 2
     else
     end if
     if currDistance > pointDistance4 then
-    	position = 3
+        position = 3
     else
     end if
     if currDistance > pointDistance3 then
-    	position = 4
+        position = 4
     else
     end if
     if  currDistance > pointDistance2 then
-    	position = 5
+        position = 5
     else
     end if
     if currDistance > pointDistance1 then
-    	position = 6
+        position = 6
     else
     end if
     if currDistance > pointDistance0  then
-    	position = 7
+        position = 7
     else
     end if
 
@@ -265,62 +265,62 @@ if macro and macroDelay and not pause then
 
     //сброс накопленной истории
     if scan0 and scan1 and scan2 and scan3 or not enable then
-    	countPosition0 = 0
-    	countPosition1 = 0
-    	countPosition2 = 0
-    	countPosition3 = 0
-    	scan0 = false
-    	scan1 = false
-    	scan2 = false
-    	scan3 = false
+        countPosition0 = 0
+        countPosition1 = 0
+        countPosition2 = 0
+        countPosition3 = 0
+        scan0 = false
+        scan1 = false
+        scan2 = false
+        scan3 = false
     else
     end if
 
     //Первый проход влагомера
     if not scan1 and not scan0 then
-    	countPosition0 = position
-    	if  direction and (position > 4) then
-    		scan0 = true
-    	else
-    	end if
+        countPosition0 = position
+        if  direction and (position > 4) then
+            scan0 = true
+        else
+        end if
     else
     end if
 
     //Второй проход
     if scan0 and not scan1 then
-    	countPosition1 = reversPosition
-    	if not direction then
-    		scan1 = true
-    	else
-    	end if
+        countPosition1 = reversPosition
+        if not direction then
+            scan1 = true
+        else
+        end if
     else
     end if
 
     //Третий проход
     if scan1 and not scan2 then
-    	countPosition2 = position - 1
-    	if  direction  then
-    		scan2 = true
-    	else
-    	end if
+        countPosition2 = position - 1
+        if  direction  then
+            scan2 = true
+        else
+        end if
     else
     end if
 
     //Четвертый проход
     if scan2 and not scan3 then
-    	countPosition3 = reversPosition
-    	if  not direction or (countPosition3 == 6) then
-    		scan3 = true
-    	else
-    	end if
+        countPosition3 = reversPosition
+        if  not direction or (countPosition3 == 6) then
+            scan3 = true
+        else
+        end if
     else
     end if
 
     //Текущее положение по горизонтальной оси (от 0 до 24)
     countPositionAll = countPosition0 + countPosition1 + countPosition2 + countPosition3
     if not enable then
-    	countPositionAll = 0
-    	position = 0
+        countPositionAll = 0
+        position = 0
     else
     end if
 
