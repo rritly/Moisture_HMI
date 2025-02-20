@@ -326,30 +326,30 @@ if macro and macroDelay and not pause then
 
     //Извлечение отдельных битов из числа текущей позиции (ось Y)
     select case position
-    	case 0 
-    		position0 = false
-    	break
-    	case 1 
-    		position0 = true
-    	break
-    	case 2
-    		position1 = true
-    	break
-    	case 3
-    		position2 = true
-    	break
-    	case 4 
-    		position3 = true
-    	break
-    	case 5
-    		position4 = true
-    	break
-    	case 6
-    		position5 = true
-    	break
-    	case 7
-    		position6 = true
-    	break
+        case 0 
+            position0 = false
+        break
+        case 1 
+            position0 = true
+        break
+        case 2
+            position1 = true
+        break
+        case 3
+            position2 = true
+        break
+        case 4 
+            position3 = true
+        break
+        case 5
+            position4 = true
+        break
+        case 6
+            position5 = true
+        break
+        case 7
+            position6 = true
+        break
     end select
 
 
