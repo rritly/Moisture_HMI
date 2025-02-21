@@ -6,94 +6,94 @@ bool macro = true
 bool macroDelay = false
 bool macroRaise = false
 
-//Ожидание перед запуском программы
+// Ожидание перед запуском программы
 bool pause, pauseRaise = false, pauseFall = false
 
-//Сигнал работы влагомера
+// Сигнал работы влагомера
 bool enable = false
 
-//Пуск программы после паузы
+// Пуск программы после паузы
 bool run = false, runRise = false
 
-//Фронт сигнала работы влагомера
+// Фронт сигнала работы влагомера
 bool enableRaise = false
 
-//Спад сигнала работы влагомера
+// Спад сигнала работы влагомера
 bool enableFall = false, enableFall2 = false, enableFall3 = false
 
-//точка на вертикальной оси
+// точка на вертикальной оси
 bool position0 = false, position1 = false, position2 = false, position3 = false, position4 = false, position5 = false, position6 = false 
 
-//точка на вертикальной оси, фронт
+// точка на вертикальной оси, фронт
 bool  position0Raise = false, position1Raise = false, position2Raise = false, position3Raise = false, position4Raise = false, position5Raise = false, position6Raise = false
 
-//точка на вертикальной оси, спад
+// точка на вертикальной оси, спад
 bool position0Fall = false, position1Fall = false, position2Fall = false, position3Fall = false, position4Fall = false, position5Fall = false, position6Fall = false
 
-//линия среза графика
+// линия среза графика
 bool graf0 = false, graf1  = false, graf2 = false, graf3 = false, graf4 = false, graf5  = false, graf6 = false, graf7  = false, graf8 = false, graf9 = false, graf10 = false, graf11 = false
 bool graf12 = false, graf13 = false, graf14 = false, graf15 = false, graf16 = false, graf17 = false, graf18 = false, graf19 = false, graf20 = false, graf21 = false, graf22 = false, graf23 = false
 
-//линия среза графика - фронт сигнала
+// линия среза графика - фронт сигнала
 bool graf0Raise = false, graf1Raise  = false, graf2Raise = false, graf3Raise = false, graf4Raise = false, graf5Raise  = false, graf6Raise = false, graf7Raise  = false, graf8Raise = false, graf9Raise = false, graf10Raise = false, graf11Raise = false
 bool graf12Raise = false, graf13Raise = false, graf14Raise = false, graf15Raise = false, graf16Raise = false, graf17Raise = false, graf18Raise = false, graf19Raise = false, graf20Raise = false, graf21Raise = false, graf22Raise = false, graf23Raise = false
 
-//линия среза графика - спад сигнала
+// линия среза графика - спад сигнала
 bool graf0Fall = false, graf1Fall  = false, graf2Fall = false, graf3Fall = false, graf4Fall = false, graf5Fall  = false, graf6Fall = false, graf7Fall  = false, graf8Fall = false, graf9Fall = false, graf10Fall = false, graf11Fall = false
 bool graf12Fall = false, graf13Fall = false, graf14Fall = false, graf15Fall = false, graf16Fall = false, graf17Fall = false, graf18Fall = false, graf19Fall = false, graf20Fall = false,  graf21Fall = false, graf22Fall = false, graf23Fall = false
 
-//сигнал показа числа на графике
+// сигнал показа числа на графике
 bool moisture0, moisture1, moisture2, moisture3, moisture4, moisture5, moisture6, moisture7, moisture8, moisture9, moisture10, moisture11, moisture12, moisture13, moisture14, moisture15, moisture16, moisture17, moisture18, moisture19, moisture20, moisture21, moisture22, moisture23
 
-//Отсутствие достоверной влажности
+// Отсутствие достоверной влажности
 bool NotMoisture0, NotMoisture1, NotMoisture2, NotMoisture3, NotMoisture4, NotMoisture5, NotMoisture6, NotMoisture7, NotMoisture8, NotMoisture9, NotMoisture10, NotMoisture11, NotMoisture12, NotMoisture13, NotMoisture14, NotMoisture15, NotMoisture16, NotMoisture17, NotMoisture18, NotMoisture19, NotMoisture20, NotMoisture21, NotMoisture22, NotMoisture23
 
-//Отсутствие достоверной влажности
+// Отсутствие достоверной влажности
 bool errMoisture = false, errMoistureRaise = false, errMoistureFall = false
 
-//Направление движения влагомера (1=обратно)
+// Направление движения влагомера (1=обратно)
 bool direction = false
 
-//Пройдена вся ширина листа. 4 переменных - 4 прохода
+// Пройдена вся ширина листа. 4 переменных - 4 прохода
 bool scan0, scan1, scan2, scan3
 
-//Флаг появления всех точек на графике
+// Флаг появления всех точек на графике
 bool allMoisture = false
 
-//Статус работы влагомера(3=работа)
+// Статус работы влагомера(3=работа)
 unsigned char status = 0
 
-//Текущая позиция(0 - 7)
+// Текущая позиция(0 - 7)
 unsigned char position = 0
 
-//Положение текущей точки по горизонтальной оси
+// Положение текущей точки по горизонтальной оси
 unsigned char countPositionAll, countPosition0, countPosition1, countPosition2, countPosition3
 
-//Текущая позиция в обратном порядке(7 - 0)
+// Текущая позиция в обратном порядке(7 - 0)
 unsigned char reversPosition = 0
 
-//Ширина листа, мм
+// Ширина листа, мм
 unsigned short constDistance = 0
 
-//Текущее положение влагомера, мм
+// Текущее положение влагомера, мм
 unsigned short currDistance = 0
 
-//7 точек по вертикальной оси, мм
+// 7 точек по вертикальной оси, мм
 unsigned short pointDistance0, pointDistance1, pointDistance2, pointDistance3, pointDistance4, pointDistance5
 
-//6 точек по вертикальной оси, мм
+// 6 точек по вертикальной оси, мм
 unsigned short pointDistance00, pointDistance11, pointDistance22, pointDistance33, pointDistance44, pointDistance55 = 0
 
-//Текущая влажность
+// Текущая влажность
 float currMoisture = 0.0
 
-//Задержка после пуска макроса
+// Задержка после пуска макроса
 macroDelay = TON0(macro, 55)
 
-//фронт сигнала пуска макроса
+// фронт сигнала пуска макроса
 macroRaise = rise32(macroDelay)
 
-//Берем переменные из контроллера
+// Берем переменные из контроллера
 GetData(status, "Local HMI", LW, 86, 1)
 GetData(constDistance, "Local HMI", LW, 88, 1)
 GetData(currDistance, "Local HMI", LW, 90, 1)
@@ -353,7 +353,7 @@ if macro and macroDelay and not pause then
     end select
 
 
-    //Извлечение отдельных битов из числа текущей позиции (ось X)
+    // Извлечение отдельных битов из числа текущей позиции (ось X)
     select case countPositionAll
     case 0 
         graf0 = false
@@ -432,7 +432,7 @@ if macro and macroDelay and not pause then
     break
     end select 
 
-    влечение фронта/спада из сигналов позиции (ось Y и X)
+    // Извлечение фронта/спада из сигналов позиции (ось Y и X)
     graf0Raise = rise0(graf0)
     graf0Fall = fall0(graf0)
     graf1Raise = rise1(graf1)
@@ -496,7 +496,7 @@ if macro and macroDelay and not pause then
     position6Raise = rise30(position6)
     position6Fall = fall30(position6)
 
-    редача в память по факту изменения переменной (ось Y)
+    // Передача в память по факту изменения переменной (ось Y)
     if position0Raise or position0Fall or enableFall2  then
         SetData(position0, "Local HMI", LB, 342, 1)
     else
@@ -526,7 +526,7 @@ if macro and macroDelay and not pause then
     else
     end if
 
-    //Передача в память по факту изменения переменной (линия среза оси Х)
+    // Передача в память по факту изменения переменной (линия среза оси Х)
     if graf0Raise or graf0Fall or enableFall2  then
         SetData(graf0, "Local HMI", LB, 300, 1)
     else
@@ -624,24 +624,24 @@ if macro and macroDelay and not pause then
     else
     end if
 
-    //Все точки на графике отображены. Нужно для прекращения вызова функций записи.
+    // Все точки на графике отображены. Нужно для прекращения вызова функций записи.
     allMoisture = enable and moisture0 and moisture1 and moisture2 and moisture3 and moisture4 and moisture5 and moisture6 and moisture0 and moisture7 and moisture8 and moisture9 and moisture10 and moisture11 and moisture12 and moisture13 and moisture14 and moisture15 and moisture16 and moisture17 and moisture18 and moisture19 and moisture20 and moisture21 and moisture22 and moisture23
 
-    //Передача в память по факту изменения переменной оси Y.
+    // Передача в память по факту изменения переменной оси Y.
     if graf0Raise or enableFall2 then
-    //Если нет влажности, то показ серого прямоугольника
+        // Если нет влажности, то показ серого прямоугольника
         if errMoisture or NotMoisture0 then
             SetData(errMoisture, "Local HMI", LB, 410, 1)
             NotMoisture0 = errMoisture
         else
         end if
-        //Если влажность есть, то запись влажности в точку на графике
+        // Если влажность есть, то запись влажности в точку на графике
         if not errMoisture and enable then
             SetData(currMoisture, "Local HMI", LW, 200, 1)
             moisture0 = true
         else
         end if
-        //Запись бита, для показа окошка с числом влажности на графике. Если все точки записаны, то прекращение записи.
+        // Запись бита, для показа окошка с числом влажности на графике. Если все точки записаны, то прекращение записи.
         if not allMoisture then 
             SetData(graf0, "Local HMI", LB, 371, 1)
         else
@@ -1043,7 +1043,7 @@ if macro and macroDelay and not pause then
 else
 end if
 
-//Однократное вычислени интервалов между позициями чтобы показать точки пройденного пути (ось Y)
+// Однократное вычислени интервалов между позициями чтобы показать точки пройденного пути (ось Y)
 if enableRaise or macroRaise then
     pointDistance00 = constDistance / 6 * 5
     pointDistance11 = constDistance / 6 * 4
@@ -1053,7 +1053,7 @@ if enableRaise or macroRaise then
 else
 end if
 
-//Передача вычисленных чисел точек пройденного пути в память
+// Передача вычисленных чисел точек пройденного пути в память
 if enableRaise or macroRaise then
     SetData(pointDistance55, "Local HMI", LW, 380, 1)
     SetData(pointDistance44, "Local HMI", LW, 382, 1)
